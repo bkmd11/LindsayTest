@@ -1,0 +1,10 @@
+multiple choice = {}
+
+Multi_option = {}
+
+shortAnswer =[]
+
+criticalThinking = []
+
+
+
