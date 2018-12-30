@@ -16,6 +16,8 @@ Level_one_multi_choice = {'What is a hypothesis?':{'A guess': False,
 
 """
 
+#cant use value to call key!
+#need to rewrite so the answer option is the value, and an identifier is the key
 
 dictionary = {}
 question = 'spam'
@@ -25,12 +27,13 @@ while question != '':
     if question == '':
         break
     else:
-        answer1 = input('What is the correct answer? ')
-        answer2 = input('First wrong answer: ')
-        answer3 = input('Second wrong answer: ')
-        answer4 = input('Final wrong answer: ')
-        # structuring the dictionary
-        dictionary.setdefault(question, {answer1: True, answer2:False, answer3:False, answer4:False})
+        correct_answer = input('What is the correct answer? ')
+        wrong_answer1 = input('First wrong answer: ')
+        wrong_answer2 = input('Second wrong answer: ')
+        wrong_answer3 = input('Final wrong answer: ')
+        dictionary.setdefault(question, {'correct_answer': correct_answer, 'wrong_answer1': wrong_answer1,
+                                         'wrong_answer2': wrong_answer2, 'wrong_answer3': wrong_answer3})
+        
 
 file_name = input('What do you want to name this file? ')
 file = open('%s.py' % (file_name), 'w')
