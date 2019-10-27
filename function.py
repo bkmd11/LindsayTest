@@ -3,6 +3,7 @@
 import random
 
 #handles multiple choice questions from a dictionary
+# I need to modify this for my new format
 def multiple_choice_questions(question_dic, list_obj, i, test_file, answer_file):
     random.shuffle(list_obj)
     for question_num in range(i):
